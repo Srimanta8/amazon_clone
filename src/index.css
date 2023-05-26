@@ -1,13 +1,32 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .link {
+    @apply cursor-pointer hover:underline;
+  }
+  .SideBarLinks {
+    @apply text-sm flex items-center justify-between hover:bg-slate-200 px-6 py-2 cursor-pointer;
+  }
+  .listLinks{
+    @apply  text-sm  tracking-wide font-thin hover:text-lightgray cursor-pointer hover:underline duration-150;
+  }
+  .h3links{
+    @apply  text-white font-mono text-base font-semibold mb-3;
+  }
+  .ul-links{
+    @apply flex flex-col font-serif gap-2 ;
+  }
+  .footerbottomtitle{
+    @apply w-24 font-semibold text-[12px] group-hover:underline text-white  mb-[2px];
+  }
+  .footerbottomp{
+    @apply w-24 tracking-tight text-[12px] group-hover:underline text-lightgray;
+  }
+  .productli{
+    @apply text-gray hover:text-black text-sm font-medium border-b-[1px] border-b-bluegray hover:border-b-gray 
+    flex items-center justify-end gap-2 hover:cursor-pointer duration-300 w-full;
+  }
+  
 }
